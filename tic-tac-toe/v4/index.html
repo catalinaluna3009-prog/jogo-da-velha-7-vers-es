@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha - Versão 4</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Velha</h1>
+
+        <section class="setup" id="setup">
+            <div class="form-group">
+                <label for="mode">Modo de jogo:</label>
+                <select id="mode">
+                    <option value="PvP">Jogador vs. Jogador</option>
+                    <option value="PvC">Jogador vs. Computador</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="player1">Jogador 1:</label>
+                    <input type="text" id="player1" placeholder="Nome" maxlength="12">
+                </div>
+                <div class="form-group">
+                    <label for="symbol1">Símbolo:</label>
+                    <input type="text" id="symbol1" placeholder="X" maxlength="2" value="X">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="player2">Jogador 2:</label>
+                    <input type="text" id="player2" placeholder="Nome" maxlength="12" value="Computador">
+                </div>
+                <div class="form-group">
+                    <label for="symbol2">Símbolo:</label>
+                    <input type="text" id="symbol2" placeholder="O" maxlength="2" value="O">
+                </div>
+            </div>
+            <button id="start" class="btn-start">Iniciar Jogo</button>
+        </section>
+
+        <div class="game-info" id="game-info" style="display: none;">
+            <div id="matchup">Jogador 1 (X) vs. Jogador 2 (O)</div>
+            <div class="scoreboard">
+                <div class="score" id="score-1">
+                    <span id="name-1">Jogador 1 (X)</span>: <span id="pts-1">0</span>
+                </div>
+                <div class="score" id="score-2">
+                    <span id="name-2">Jogador 2 (O)</span>: <span id="pts-2">0</span>
+                </div>
+                <div class="score" id="score-draw">
+                    Empates: <span id="pts-draw">0</span>
+                </div>
+            </div>
+            <button id="clear-scores" class="btn-clear">Zerar Placar</button>
+        </div>
+
+        <div id="status">Configure o jogo e clique em Iniciar.</div>
+
+        <div class="board" id="board">
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+        </div>
+
+        <button id="reset" class="btn-reset" style="display: none;">Novo Jogo</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

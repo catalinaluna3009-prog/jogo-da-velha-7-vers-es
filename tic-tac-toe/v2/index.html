@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha - Versão 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Velha</h1>
+
+        <!-- Cadastro de nomes -->
+        <section class="setup" id="setup">
+            <div class="form-group">
+                <label for="player1">Jogador 1:</label>
+                <input type="text" id="player1" placeholder="Nome do jogador 1" maxlength="12">
+            </div>
+            <div class="form-group">
+                <label for="player2">Jogador 2:</label>
+                <input type="text" id="player2" placeholder="Nome do jogador 2" maxlength="12">
+            </div>
+            <button id="start" class="btn-start">Iniciar Jogo</button>
+        </section>
+
+        <!-- Placar e nomes -->
+        <div class="game-info" id="game-info" style="display: none;">
+            <div id="matchup">Fulano vs. Beltrano</div>
+            <div class="scoreboard">
+                <div class="score" id="score-x">
+                    <span id="name-x">Jogador X</span>: <span id="pts-x">0</span>
+                </div>
+                <div class="score" id="score-o">
+                    <span id="name-o">Jogador O</span>: <span id="pts-o">0</span>
+                </div>
+                <div class="score" id="score-draw">
+                    Empates: <span id="pts-draw">0</span>
+                </div>
+            </div>
+            <button id="clear-scores" class="btn-clear">Zerar Placar</button>
+        </div>
+
+        <div id="status">Preencha os nomes e clique em Iniciar Jogo.</div>
+
+        <div class="board" id="board">
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+        </div>
+
+        <button id="reset" class="btn-reset" style="display: none;">Novo Jogo</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

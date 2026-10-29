@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha - Versão 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Velha</h1>
+
+        <div class="info">
+            <div id="players">
+                <span id="player-x">Jogador 1: <strong>X</strong></span>
+                <span id="player-o">Jogador 2: <strong>O</strong></span>
+            </div>
+            <div id="status">Sorteando jogadores...</div>
+        </div>
+
+        <div class="board" id="board">
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+        </div>
+
+        <button id="reset" class="btn-reset">Novo Jogo</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
